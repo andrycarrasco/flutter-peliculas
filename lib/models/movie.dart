@@ -19,7 +19,7 @@ class Movie {
   });
 
   bool adult;
-  String backdropPath;
+  String? backdropPath;
   List<int> genreIds;
   int id;
   String originalLanguage;
@@ -36,7 +36,8 @@ class Movie {
   get fullPosterImg {
     if (this.posterPath != null)
       return 'https://image.tmdb.org/t/p/w500${this.posterPath}';
-    return 'https://i.stack.imgur.com/GNhx0.png';
+    return 'http://www.pequenomundo.cl/wp-content/themes/childcare/images/default.png';
+    // return 'https://i.stack.imgur.com/GNhx0.png';
   }
 
   factory Movie.fromJson(String str) => Movie.fromMap(json.decode(str));
